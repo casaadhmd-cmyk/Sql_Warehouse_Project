@@ -1,0 +1,28 @@
+/* As Using the Sql Lite Due to lap restriction Unable to Create the Schema's
+But Adding the Schema Script and instead creating the Table itself 
+
+-- Create Schemas
+CREATE SCHEMA bronze;
+GO
+CREATE SCHEMA silver;
+GO
+CREATE SCHEMA gold;
+GO
+
+
+---Creating Table instead of Schema's 
+CREATE TABLE Bronze (
+    id INTEGER PRIMARY KEY,
+    name TEXT
+);
+Go
+CREATE TABLE  Silver(
+    id INTEGER PRIMARY KEY,
+    name TEXT
+);
+Go 
+CREATE TABLE Gold (
+    id INTEGER PRIMARY KEY,
+    name TEXT
+);
+
