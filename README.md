@@ -19,8 +19,11 @@ SQL Warehouse Project To Understand and Build The warehouse  Using the ETL  ( Ex
 2. Data Lake
 3. Data lakehouse
 4. Data Mesh - In this project will be using this method of Data Architure by Layer
-   4a.Layers are Bronze , Silver & Gold
-5. Schema -Star Schema    
+    Layers
+     a.Bronze - Raw Data From Source System without change
+     b. Silver - Transorfomation The data &
+     c. Gold  -For the Business Views.
+6. Schema -Star Schema    
 
 <img width="792" height="671" alt="Saadh 1st Architect For the Data ware house Project" src="https://github.com/user-attachments/assets/b18b4f2e-2993-4168-af48-1002df1ecd76" />
 
