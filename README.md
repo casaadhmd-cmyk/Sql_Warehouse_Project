@@ -2,6 +2,7 @@
 SQL Warehouse Project To Understand and Build The warehouse  Using the ETL  ( Extract Trnasform LOAD)
 
 # EXTRACTION  :
+
   1.Extraction Method - Pull Extraction 
   2.Extraction Type - Full Extraction
   3.Extraction Technique - File Passing
