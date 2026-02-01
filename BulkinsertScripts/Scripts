@@ -7,7 +7,7 @@ BULK INSERT bronze.erp_cust_az12
 		);
 
 
---Sampple :
+--Sample :
 BULK INSERT JOMATO 
 FROM 'C:\Users\mohammed.saadh.ASCENDION\OneDrive - ascendion\Desktop\SQL ASSINGMENTS\MANDATORY 2\Jomato.csv'
 With 
