@@ -1,0 +1,7 @@
+BULK INSERT bronze.erp_cust_az12
+		FROM 'C:\sql\dwh_project\datasets\source_erp\Filename.csv'
+		WITH (
+			FIRSTROW = 2,
+			FIELDTERMINATOR = ',',
+			TABLOCK
+		);
