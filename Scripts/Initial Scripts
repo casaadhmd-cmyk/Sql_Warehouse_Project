@@ -1,6 +1,12 @@
 /* As Using the Sql Lite Due to lap restriction Unable to Create the Schema's
 But Adding the Schema Script and instead creating the Table itself 
 
+
+---Note while creating the table try to use 
+IF OBJECT_ID ('bronze_erp_CUST_AZ12','U')IS NOT NULL 
+		DROP TABLE bronze_erp_CUST_AZ12;
+
+
 -- Create Schemas
 CREATE SCHEMA bronze;
 GO
