@@ -15,3 +15,10 @@ SQL Warehouse Project To Understand and Build The warehouse  Using the ETL  ( Ex
   1.ALL
 
 <img width="792" height="671" alt="Saadh 1st Architect For the Data ware house Project" src="https://github.com/user-attachments/assets/b18b4f2e-2993-4168-af48-1002df1ecd76" />
+
+
+# TOOLS USED :
+1. DataBase Toom -Debeaver
+2. Database Used -  Sql lite 
+3. Planning  - Notion.com
+4. Data Architure - Draw.io
