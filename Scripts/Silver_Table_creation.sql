@@ -1,14 +1,19 @@
----1.To Get the Bronze Table Creation script
+/*1.To Get the Bronze Table Creation script
 
 SELECT name, sql
 FROM sqlite_master
 WHERE type = 'table'
 AND name LIKE 'bronze_%';
 
---2. Rename the "bronze To silver"
+2. Rename the "bronze To silver"
+3. Run the Script below which is for Silver which is exactly same as bronze BUT WE WILL MODIFY AND CLEAN THE DATA BEFORE TRANSAFERRING TO GOLD
+4. METADATA COLUMN : 
+a.create_dt - The record load timestamp.
+b.update_dt - The record last updated .
+c.source_system - The origin system of the record.
+d.file_location - The file source of the reocrd.
 
-
-  --3. Run the Script below which is for Silver which is exactly same as bronze BUT WE WILL MODIFY AND CLEAN THE DATA BEFORE TRANSAFERRING TO GOLD
+*/
 
 
 
@@ -19,8 +24,12 @@ cst_firstname TEXT,
 cst_lastname TEXT,
 cst_marital_status TEXT,
 cst_gndr TEXT,
-cst_create_date NUMERIC
+cst_create_date NUMERIC,
+dwh_create_date NUMERIC
+
 );
+
+GO
 
 CREATE TABLE silver_crm_prd_info (
 
@@ -36,18 +45,22 @@ prd_line TEXT,
 
 prd_start_dt NUMERIC,
 
-prd_end_dt NUMERIC
+prd_end_dt NUMERIC,
+dwh_create_date NUMERIC
 
 );
 
+GO
 
 CREATE TABLE silver_erp_CUST_AZ12
 (
 
 CID TEXT,
 BDATE NUMERIC,
-GEN TEXT
+GEN TEXT,
+dwh_create_date NUMERIC
 );
+GO
 
 CREATE TABLE silver_erp_PX_CAT_G1V2
 
@@ -55,17 +68,22 @@ CREATE TABLE silver_erp_PX_CAT_G1V2
 ID TEXT,
 CAT TEXT,
 SUBCAT TEXT,
-MAINTENANCE TEXT
+MAINTENANCE TEXT,
+dwh_create_date NUMERIC
 );
+
+GO
 
 CREATE TABLE silver_erp_LOC_A101
 
 (
 
 CID	TEXT,
-CNTRY TEXT
+CNTRY TEXT,
+dwh_create_date NUMERIC
 );
 
+GO
 
 CREATE TABLE silver_crm_sales_details (
 
@@ -77,5 +95,9 @@ sls_ship_dt NUMERIC,
 sls_due_dt NUMERIC,
 sls_sales Numeric,
 sls_quantity Integer,
-sls_price Numeric
+sls_price Numeric,
+dwh_create_date NUMERIC
 );
+GO
+
+
