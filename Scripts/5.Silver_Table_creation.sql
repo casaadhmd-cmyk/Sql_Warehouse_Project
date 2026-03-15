@@ -17,6 +17,7 @@ d.file_location - The file source of the reocrd.
 
 
 
+
 CREATE TABLE silver_crm_customer_info (
 cst_id INTEGER,
 cst_key TEXT,
@@ -25,7 +26,7 @@ cst_lastname TEXT,
 cst_marital_status TEXT,
 cst_gndr TEXT,
 cst_create_date NUMERIC,
-dwh_create_date NUMERIC
+dwh_create_date DEFAULT CURRENT_TIMESTAMP
 
 );
 
@@ -46,7 +47,8 @@ prd_line TEXT,
 prd_start_dt NUMERIC,
 
 prd_end_dt NUMERIC,
-dwh_create_date NUMERIC
+dwh_create_date DEFAULT CURRENT_TIMESTAMP
+
 
 );
 
@@ -58,7 +60,8 @@ CREATE TABLE silver_erp_CUST_AZ12
 CID TEXT,
 BDATE NUMERIC,
 GEN TEXT,
-dwh_create_date NUMERIC
+dwh_create_date DEFAULT CURRENT_TIMESTAMP
+
 );
 GO
 
@@ -69,7 +72,8 @@ ID TEXT,
 CAT TEXT,
 SUBCAT TEXT,
 MAINTENANCE TEXT,
-dwh_create_date NUMERIC
+dwh_create_date DEFAULT CURRENT_TIMESTAMP
+
 );
 
 GO
@@ -80,7 +84,8 @@ CREATE TABLE silver_erp_LOC_A101
 
 CID	TEXT,
 CNTRY TEXT,
-dwh_create_date NUMERIC
+dwh_create_date DEFAULT CURRENT_TIMESTAMP
+
 );
 
 GO
@@ -96,8 +101,11 @@ sls_due_dt NUMERIC,
 sls_sales Numeric,
 sls_quantity Integer,
 sls_price Numeric,
-dwh_create_date NUMERIC
+dwh_create_date DEFAULT CURRENT_TIMESTAMP
+
 );
 GO
+
+
 
 
